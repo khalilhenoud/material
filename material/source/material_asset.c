@@ -10,7 +10,7 @@
  */
 #include <assert.h>
 #include <string.h>
-#include <acsu/material/material_asset.h>
+#include <material/material_asset.h>
 #include <library/allocator/allocator.h>
 #include <library/core/core.h>
 #include <library/type_registry/type_registry.h>

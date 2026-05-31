@@ -16,7 +16,7 @@ extern "C" {
 #endif
 
 #include <stdint.h>
-#include <acsu/internal/module.h>
+#include <material/internal/module.h>
 #include <library/asset/asset_ref.h>
 #include <library/asset/types.h>
 #include <library/containers/cvector.h>
@@ -78,66 +78,66 @@ struct material_asset_t {
   cvector_t textures;
 } material_asset_t;
 
-ACSU_API
+MATERIAL_API
 void
 material_asset_def(void *ptr);
 
-ACSU_API
+MATERIAL_API
 uint32_t
 material_asset_is_def(const void *ptr);
 
-ACSU_API
+MATERIAL_API
 void
 material_asset_serialize(
   const void *src,
   binary_stream_t *stream);
 
-ACSU_API
+MATERIAL_API
 void
 material_asset_deserialize(
   void *dst,
   const allocator_t *allocator,
   binary_stream_t* stream);
 
-ACSU_API
+MATERIAL_API
 size_t
 material_asset_type_size(void);
 
-ACSU_API
+MATERIAL_API
 uint32_t
 material_asset_owns_alloc(void);
 
-ACSU_API
+MATERIAL_API
 const allocator_t *
 material_asset_get_alloc(const void *ptr);
 
-ACSU_API
+MATERIAL_API
 void
 material_asset_cleanup(
   void *ptr,
   const allocator_t *allocator);
 
-ACSU_API
+MATERIAL_API
 const char *
 material_asset_get_dir(void);
 
-ACSU_API
+MATERIAL_API
 loader_t
 material_asset_get_loader(void);
 
-ACSU_API
+MATERIAL_API
 deloader_t
 material_asset_get_deloader(void);
 
-ACSU_API
+MATERIAL_API
 uint32_t
 material_asset_type_asset_count(const void *src);
 
-ACSU_API
+MATERIAL_API
 void
 material_asset_type_get_assets(const void *src, const asset_ref_t *refs[]);
 
-ACSU_API
+MATERIAL_API
 uint32_t
 material_asset_is_asset_type(void);
 
