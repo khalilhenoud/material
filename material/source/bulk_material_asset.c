@@ -189,8 +189,8 @@ bulk_material_asset_type_get_assets(const void *src, const asset_ref_t *refs[])
   {
     const bulk_material_asset_t *bulk = src;
     const material_asset_t *material = NULL;
-    uint32_t total = 0, i = 0, j = 0;
-    for (; i < bulk->materials.size; ++i) {
+    uint32_t total = 0;
+    for (uint32_t i = 0; i < bulk->materials.size; ++i) {
       material = cvector_as_c(&bulk->materials, i, material_asset_t);
       material_asset_type_get_assets(material, refs + total);
       total += material_asset_type_asset_count(material);
