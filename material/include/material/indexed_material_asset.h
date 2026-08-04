@@ -123,6 +123,10 @@ MATERIAL_API
 uint32_t
 indexed_material_asset_is_asset_type(void);
 
+MATERIAL_API
+uint32_t
+indexed_material_asset_is_indexed(void);
+
 #ifdef __cplusplus
 }
 #endif
