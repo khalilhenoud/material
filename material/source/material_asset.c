@@ -170,7 +170,7 @@ material_asset_cleanup(
     cstring_cleanup2(&material->name);
     cvector_cleanup_func(
       &material->textures,
-      material->textures.allocator,
+      NULL,
       texture_asset_properties_cleanup);
     material_asset_def(material);
   }
