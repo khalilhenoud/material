@@ -190,6 +190,12 @@ indexed_material_asset_is_asset_type(void)
   return 1;
 }
 
+uint32_t
+indexed_material_asset_is_indexed(void)
+{
+  return 1;
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 INITIALIZER(register_indexed_material_asset_t)
 {
@@ -209,5 +215,6 @@ INITIALIZER(register_indexed_material_asset_t)
   vtable.fn_type_asset_count = indexed_material_asset_type_asset_count;
   vtable.fn_type_get_assets = indexed_material_asset_type_get_assets;
   vtable.fn_is_asset_type = indexed_material_asset_is_asset_type;
+  vtable.fn_is_indexed_type = indexed_material_asset_is_indexed;
   register_type(get_type_id(indexed_material_asset_t), &vtable);
 }
