@@ -120,10 +120,11 @@ bulk_material_asset_loader(
 
   {
     bulk_material_asset_t **ptr = (bulk_material_asset_t **)ptr_addr;
-    bulk_material_asset_t *asset_ptr = *ptr;
+    bulk_material_asset_t *asset_ptr = NULL;
     binary_stream_t *stream = binary_stream_from_file(
       asset_ref->path.str, allocator);
     *ptr = allocator->mem_alloc(sizeof(bulk_material_asset_t));
+    asset_ptr = *ptr;
     bulk_material_asset_def(asset_ptr);
     bulk_material_asset_deserialize(asset_ptr, allocator, stream);
     binary_stream_cleanup(stream);
