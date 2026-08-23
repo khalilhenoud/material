@@ -174,7 +174,8 @@ indexed_material_asset_type_asset_count(const void *src)
 }
 
 void
-indexed_material_asset_type_get_assets(const void *src, const asset_ref_t *refs[])
+indexed_material_asset_type_get_assets(
+  const void *src, const asset_ref_t *refs[])
 {
   assert(src);
 
